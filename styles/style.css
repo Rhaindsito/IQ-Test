@@ -272,7 +272,11 @@ body {
 
 .faq-answer {
   color: var(--text-secondary);
+  margin-top: 10px;
+  line-height: 1.6;
+  white-space: normal;
 }
+
 
 @media (max-width: 600px) {
   body {

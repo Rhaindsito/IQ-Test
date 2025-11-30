@@ -26,5 +26,14 @@ const faqQuestions = [
     {
         question: "What can I use this score for?",
         answer: "It can help you reflect on your strengths, preferred learning style, and how you approach problems in everyday life."
+    },
+    {
+    question: "What do the four intelligence types mean?",
+    answer: `
+        Analytical intelligence: You’re great at solving problems, spotting patterns, and thinking logically. You like figuring things out and making sense of complex ideas.<br><br>
+        Creative intelligence: You love exploring new ideas and imagining things in your own way. You think outside the box and come up with original solutions or creative projects.<br><br>
+        Practical intelligence: You’re good at handling real-life situations. You learn by doing, you adapt quickly, and you always find a way to make things work in the moment.<br><br>
+        Social intelligence: You understand people well. You communicate clearly, pick up on feelings, and make others feel comfortable. You’re a natural at teamwork and connection.
+    `
     }
 ];
