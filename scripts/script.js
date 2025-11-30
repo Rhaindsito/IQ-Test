@@ -215,7 +215,7 @@ function loadQuestion(question){
 function loadFAQ(){
     const faqContainer = document.getElementById('explanation-window');
 
-    faqContainer.innerHTML = faqQuestions.map(loadQuestion).join("");
+    faqContainer.innerHTML += faqQuestions.map(loadQuestion).join("");
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -298,4 +298,9 @@ body {
   .choice-buttons {
     font-size: 16px;
   }
+
+  #primary {
+    font-size: 19px;
+    text-align: center;
+  }
 }
