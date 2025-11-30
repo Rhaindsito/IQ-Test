@@ -205,4 +205,20 @@ submitButton.addEventListener('click', function(){
     }
 })
 
-document.addEventListener("DOMContentLoaded", updateQuestion)
+function loadQuestion(question){
+    return `<div class="faq-question">
+        <p class="faq-question-title">Q: ${question.question}</p>
+        <p class="faq-answer">A: ${question.answer}</p>
+    </div>`;
+}
+
+function loadFAQ(){
+    const faqContainer = document.getElementById('explanation-window');
+
+    faqContainer.innerHTML = faqQuestions.map(loadQuestion).join("");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateQuestion();
+    loadFAQ();
+})

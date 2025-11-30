@@ -92,6 +92,7 @@ body {
 #info {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 
 #num-nav {
@@ -207,6 +208,9 @@ body {
 }
 
 #post-submit-window {
+  position: absolute;
+  top: 35px;
+  margin-bottom: 35px;
   display: none;
   flex-direction: column; 
   position: absolute;
@@ -239,6 +243,35 @@ body {
 #graph {
   display: flex;
   
+}
+
+#explanation-window {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#explanation-window #title {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.faq-question {
+  margin-top: 10px;
+  background-color: var(--background);
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.faq-question-title {
+  font-weight: bold;
+}
+
+.faq-answer {
+  color: var(--text-secondary);
 }
 
 @media (max-width: 600px) {
