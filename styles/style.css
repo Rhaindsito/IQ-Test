@@ -1,0 +1,264 @@
+:root {
+  --background: #1A1A1A;
+  --card: #242424;
+
+  --text: #EDEDED;
+  --text-secondary: #A8A8A8;
+
+  --primary: #6C63FF;
+  --primary-darker: #3a368a;
+
+  --border: #2A2A2A;
+  --accent-border: #7d76ff;
+  --accent-border-darker: #433f88;
+}
+
+/* Animations */
+
+@keyframes shakeHover {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(10deg); }
+  20% { transform: rotate(-10deg); }
+  35% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  65% { transform: rotate(2deg); }
+  80% { transform: rotate(-2deg); }
+  90% { transform: rotate(1deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes gradient {
+  50% {transform: scale(1.5) translate(100px)}
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start completely transparent */
+        /* Optional: Add a slight movement effect */
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0);
+    }
+}
+
+/* Common Styles */
+
+.shadow {
+  box-shadow: 0 0px 15px #00000020;
+}
+
+.hoverable:hover {
+  animation-name: shakeHover;
+  animation-duration: 1s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#main {
+  display: none;
+  flex-direction: column; 
+  position: absolute;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 25px;
+
+  animation: fadeIn 1s ease-out forwards;
+}
+
+#info {
+  display: flex;
+  justify-content: space-between;
+}
+
+#num-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-buttons {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.nav-buttons span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#next-button span {
+  rotate: 180deg;
+}
+
+#question-number {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#question-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#question-guide {
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+#choices {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.choice-buttons {
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  text-align: left;
+  padding: 10px 15px;
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.choice-buttons:hover {
+  padding: 15px 20px
+}
+
+#start-button {
+  z-index: 50;
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(5px);
+
+  transition: transform 0.2s ease-in-out;
+}
+
+#start-button:hover {
+  transform: scale(1.05);
+}
+
+#start-button:active {
+  transform: scale(1)
+}
+
+#logo {
+  font-size: 40px;
+  color: var(--primary);
+}
+
+#start-text {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 30px;
+}
+
+#submit-button {
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 18px;
+
+  transition: padding 0.3s ease;
+}
+
+#submit-button:hover {
+  padding: 10px;
+}
+
+#post-submit-window {
+  display: none;
+  flex-direction: column; 
+  position: absolute;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 25px;
+
+  animation: fadeIn 1s ease-out forwards;
+}
+
+#score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#secondary {
+  color: #A8A8A8;
+}
+
+#primary {
+  font-size: 24px;
+  filter: drop-shadow(0 0 15px var(--primary)) drop-shadow(0 0 20px var(--primary));
+}
+
+#graph {
+  display: flex;
+  
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+
+  #question-title {
+    font-size: 16px;
+  }
+
+  #question-number {
+    font-size: 16px;
+  }
+
+  .nav-buttons span {
+    font-size: 16px;
+  }
+
+  .choice-buttons {
+    font-size: 16px;
+  }
+}
