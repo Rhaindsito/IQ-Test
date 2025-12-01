@@ -75,6 +75,10 @@ body {
   height: 100vh;
 }
 
+#start {
+  display: flex;
+}
+
 #main {
   display: none;
   flex-direction: column; 
