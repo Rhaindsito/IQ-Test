@@ -16,10 +16,6 @@ const faqQuestions = [
         answer: "Yes. Many people score highly in multiple areas, which means their strengths are balanced across different cognitive skills."
     },
     {
-        question: "Do you store my answers or personal data?",
-        answer: "No. Everything runs locally in your browser, and nothing is saved or uploaded."
-    },
-    {
         question: "Does this test reflect school intelligence?",
         answer: "Not exactly. It focuses on different types of strengths, including creativity, problem-solving, and social understanding, which schools often overlook."
     },

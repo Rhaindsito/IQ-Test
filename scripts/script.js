@@ -1,9 +1,10 @@
 const startButton = document.getElementById("start-button");
+const startWindow = document.getElementById("start");
 const mainWindow = document.getElementById("main");
 
 startButton.addEventListener('click', function(){
     mainWindow.style.display = "flex";
-    startButton.style.display = "none"
+    startWindow.style.display = "none"
 })
 
 let currQuestion = 0;
@@ -20,6 +21,11 @@ choice1.addEventListener('click', function(){
     choice2.style.backgroundColor = "#1A1A1A";
     choice3.style.backgroundColor = "#1A1A1A";
     choice4.style.backgroundColor = "#1A1A1A";
+
+    if (!answers.includes("")){
+        document.getElementById("error-msg").style.display = "none";
+        return;
+    }
 })
 
 choice2.addEventListener('click', function(){
@@ -28,6 +34,11 @@ choice2.addEventListener('click', function(){
     choice1.style.backgroundColor = "#1A1A1A";
     choice3.style.backgroundColor = "#1A1A1A";
     choice4.style.backgroundColor = "#1A1A1A";
+
+    if (!answers.includes("")){
+        document.getElementById("error-msg").style.display = "none";
+        return;
+    }
 })
 
 choice3.addEventListener('click', function(){
@@ -36,6 +47,11 @@ choice3.addEventListener('click', function(){
     choice1.style.backgroundColor = "#1A1A1A";
     choice2.style.backgroundColor = "#1A1A1A";
     choice4.style.backgroundColor = "#1A1A1A";
+
+    if (!answers.includes("")){
+        document.getElementById("error-msg").style.display = "none";
+        return;
+    }
 })
 
 choice4.addEventListener('click', function(){
@@ -44,6 +60,11 @@ choice4.addEventListener('click', function(){
     choice1.style.backgroundColor = "#1A1A1A";
     choice2.style.backgroundColor = "#1A1A1A";
     choice3.style.backgroundColor = "#1A1A1A";
+
+    if (!answers.includes("")){
+        document.getElementById("error-msg").style.display = "none";
+        return;
+    }
 })
 
 function updateQuestion(){
@@ -143,6 +164,11 @@ submitButton.addEventListener('click', function(){
         if (submitButton.innerText != "Submit"){
             submitButton.innerText = "Submit";
         }else{
+            if (answers.includes("")){
+                document.getElementById("error-msg").style.display = "block";
+                return;
+            }
+
             mainWindow.style.display = "none"
             postSubmitWindow.style.display = "flex";
 

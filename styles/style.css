@@ -77,6 +77,11 @@ body {
 
 #start {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
 }
 
 #main {
@@ -160,9 +165,30 @@ body {
   padding: 15px 20px
 }
 
+.intro-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text);
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+#error-msg {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+  color: #AA0000;
+}
+
 #start-button {
-  z-index: 50;
-  position: absolute;
+  z-index: 1;
   cursor: pointer;
   background-color: var(--card);
   border: 1px solid var(--border);
