@@ -307,6 +307,24 @@ body {
   white-space: normal;
 }
 
+#attributions-window #title {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#sources {
+  margin-top: 10px;
+  background-color: #353535;
+  padding: 10px;
+  border: 1px solid #404040;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 @media (max-width: 600px) {
   body {
